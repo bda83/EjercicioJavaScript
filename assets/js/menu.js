@@ -1,12 +1,12 @@
-$( document ).ready(function() {
+ $( document ).ready(function() {
 
 // Hover del menú despliega submenú
   $("ul.clearfix > li").hover(function () {
     if($(window).width() >= 990) {
-      $(this).children("ul").fadeIn(100);
+      $(this).children("ul").fadeToggle(100);
     }
   },function(){
-    $(this).children("ul").fadeOut(100);
+    $(this).children("ul").fadeToggle(100);
   });
 
 // Al clicar sobre un li del menú le pone clase de seleccionado y se lo borra a los demás
